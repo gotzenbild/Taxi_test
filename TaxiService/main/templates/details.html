@@ -1,0 +1,37 @@
+{% extends 'order.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container text-center">
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Номер заказа
+    <span class="badge badge-primary badge-pill fs-md" >{{ order.id }}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Имя
+    <span class="badge badge-primary badge-pill fs-md" >{{ order.client_name }}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Номер
+    <span class="badge badge-primary badge-pill fs-md"  >{{ order.client_phone }}</span>
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    Стратовый адрес
+    <span class="badge badge-primary badge-pill fs-md" >{{ order.address }}</span>
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    Конечный адрес
+    <span class="badge badge-primary badge-pill fs-md" >{{ order.destination }}</span>
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    Время
+    <span class="badge badge-primary badge-pill fs-md" >{{ order.desired_time }}</span>
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    Марка машины
+    <span class="badge badge-primary badge-pill fs-md" >{{ order.car.brand }}</span>
+  </li>
+</ul>
+</div>
+{% endblock content %}
